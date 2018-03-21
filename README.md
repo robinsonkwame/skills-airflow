@@ -8,6 +8,7 @@ Orchestration of data processing tasks to power the Open Skills API
 
 ## Getting Started
 - Create virtualenv (ie `virtualenv -p /usr/bin/python3.4 venv`)
+- Activate virtualenv (ie `source /usr/bin/activate`)
 - `./standup.sh` # wait a couple of minutes for it to stand itself up
 
 That's it.
