@@ -1,12 +1,13 @@
 # Set up Airflow Directory variable if not already defined
-export AIRFLOW_HOME=${AIRFLOW_HOME-$HOME/airflow/}
+export AIRFLOW_HOME=${AIRFLOW_HOME-$HOME/airflow}
 
 # Airflow examples required Hive operator to be installed
 # but we don't neccesarily have it, so we do not load examples
 sed -i '/load_examples = True/c\load_examples = False' ~/airflow/airflow.cfg
 
 # Point airflow to the WDI Dags (this is a hack but whatever)
-read -p "Please enter full path to local skills-airflow/ respository (e.g. /home/foo/WDI/): " local_repo
+# tweaked for easier single script run
+echo $PWD/airflow | read -p "Please enter full path to local skills-airflow/ respository (e.g. /home/foo/WDI/): "
 sed -i '/dags_folder = */c\dags_folder = '"$local_repo"'skills-airflow/dags' ~/airflow/airflow.cfg
 
 # Airflow needs a path from which to look for skills-airflow library

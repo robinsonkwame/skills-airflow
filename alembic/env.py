@@ -2,8 +2,17 @@ from __future__ import with_statement
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 from logging.config import fileConfig
+
+import os
+import sys
+parent_dir = os.path.abspath(os.path.join(os.getcwd(), ""))
+sys.path.append(parent_dir)
+
 from utils.db import get_apiv1_dburl
 from api_sync.v1.models import Base
+
+# include parent in runtime environment so it can see
+# project imports
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
