@@ -5,7 +5,7 @@ from logging.config import fileConfig
 
 import os
 import sys
-parent_dir = os.path.abspath(os.path.join(os.getcwd(), ""))
+parent_dir = os.path.abspath(os.getcwd())
 sys.path.append(parent_dir)
 
 from utils.db import get_apiv1_dburl
