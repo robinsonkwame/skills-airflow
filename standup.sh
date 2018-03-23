@@ -9,12 +9,4 @@ echo "... upgrading databases (alembic)"
 alembic upgrade head
 
 echo "... launching airflow, note .pid file, a browser will open up"
-export AIRFLOW_HOME=${AIRFLOW_HOME-~/}
 ./airflow_setup.sh&
-
-#
-#echo " ... appending extra locations to the config file"
-#cat config/airflow_extras.cfg >> airflow.cfg
-#
-#echo " ... running the scheduler!"
-##airflow scheduler&
