@@ -1,3 +1,5 @@
+#!./env/bin/python
+
 # This is a quick and dirty script that stands up skills-airflow
 # against the robinsonkwame/skills-airflow fork (modifications made
 # so alembic wouldn't crash on env.py, etc. etc.
