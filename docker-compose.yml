@@ -1,18 +1,19 @@
 version: "3.2"
 services:
-    postgres:
-        restart: always
-        image: postgres
-        # Should be read in from yaml or url
-        environment:
-            #- POSTGRES_DATABASE=mydb
-            - POSTGRES_DATABASE=myuser
-            - POSTGRES_PASSWORD=mypassword
-            - POSTGRES_USER=myuser
-            #- PGDATABSE=mydb # use prior db
-        ports:
-            - "5432:5432"
-        build: './db'
+    # wip: removing, access live aws rds postgres
+    #postgres:
+    #    restart: always
+    #    image: postgres
+    #    # Should be read in from yaml or url
+    #    environment:
+    #        #- POSTGRES_DATABASE=mydb
+    #        - POSTGRES_DATABASE=myuser
+    #        - POSTGRES_PASSWORD=mypassword
+    #        - POSTGRES_USER=myuser
+    #        #- PGDATABSE=mydb # use prior db
+    #    ports:
+    #        - "5432:5432"
+    #    build: './db'
 
     elasticsearch:
         restart: always
